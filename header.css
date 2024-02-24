@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Fredoka;
+}
+:root{
+    --green: rgba(105, 241, 123, 0.993);
+    --lightGreen: rgb(215, 255, 182);
+    --lightestGreen:rgb(230, 252, 213);
+    --buttonColor: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%)
+}
+nav{
+    background-color: var(--green);
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+nav .logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 70px;
+    font-weight: bold;
+}
+nav .menu{
+    float: right;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-right: 20px;
+}
+.mainbutton{
+    transition: 0.5s;
+    background-size: 200% auto;
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    color: black;
+    font-size: 17px;
+    text-transform: uppercase;
+    background-image: var(--buttonColor);
+}
+.mainbutton:hover{
+    background-position: right center;
+    cursor: pointer;
+   
+}
+nav .menu .menu_list{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    
+}
+nav .menu .menu_list .menu_list_item{
+    display: inline-block; 
+    margin: 0 5px;
+    margin-right: 20px;
+    position: relative;
+}
+nav .menu .menu_list .menu_list_item label:hover{
+    cursor: pointer;
+}
+nav .menu .menu_list .menu_list_item a{
+    color: black;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    text-decoration: none;
+    
+    
+}
+
+.dropdown{
+    list-style: none;
+    position: absolute;
+    background-color: var(--green);
+    border-radius: 20px;
+    transition: .5s ease-in-out;
+    z-index: 10;
+    max-height: 0px;
+    top: 50px;
+    overflow: hidden;
+}
+.dropdown ul{
+    list-style: none;
+    margin: 20px;
+}
+.dropdown ul li{
+    line-height: 60px;
+    margin: 20px;
+    cursor: pointer;
+    
+}
+.menu #program_check{
+    display: none;
+}
+#program_check:checked ~ .dropdown{
+
+    max-height: 300px;
+    transition: .5s ease-in-out;
+
+}
+
+nav #ham_check{
+    display:none;
+}
+nav .checkbtn{
+    font-size:30px;
+    color:white;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+nav #checkbtn{
+    line-height: 80px;
+}
+
+@media (max-width:1090px){
+    nav .checkbtn{
+        display: block;
+    }
+    nav .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--lightGreen);
+        transition: all .5s;
+        left: -100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    nav .menu .menu_list{
+        list-style: none;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+    nav .menu .menu_list .menu_list_item{
+        display: block;
+        margin: 30px;
+
+    }
+    #ham_check:checked ~ .menu{
+        left: 0;
+    }
+
+    .dropdown{
+            position: static;
+        }
+
+    }
+
+

@@ -1,0 +1,70 @@
+
+.frontsection{
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.frontsection img{
+    position:absolute;
+    max-height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+.introduction{
+    background-color: rgba(0, 0, 0, 0.2);
+    height: auto;
+    padding:5%;
+    z-index: 2;
+    box-shadow: 0 30px 40px rgba(0,0,0,.2);
+    
+}
+.intro{
+    width: 60%;
+    margin-top: 8%;
+    
+}
+.intro h1{
+    font-size: 5vw;
+    color: white;
+    text-shadow: -1px 1px 0 #000;
+}
+.intro p{
+    font-size: 2vw;
+    color: white;
+    text-shadow: -1px 1px 0 #000;
+}
+
+
+.center_container{
+    padding: 10%;
+}
+.littledifference h1{
+    font-size: 3vw;
+}
+.difference_container{
+    height: 400px;
+    position: relative;
+    overflow-x: hidden;
+}
+.difference_card{
+    transition: .5s ease-in-out;
+    position: absolute;
+    width: 500px;
+    background-color: var(--lightestGreen);
+    margin: 5%;
+    height: 300px;
+    padding: 50px;
+    border-radius: 25px;
+}
+.difference_card h3{
+    font-size: 30px;
+}
+.difference_card p{
+    font-size: 20px;
+}
+.difference_buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
